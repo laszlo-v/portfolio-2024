@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  font-size: clamp(1rem, 3vw + 0.3rem, 1.5rem);
+  cursor: pointer;
+}
+a:link {
+  color: #ccc;
+}
+a:visited {
+  color: #ccc;
+}
+a:hover {
+  color: #ccc;
+}
+a:active {
+  color: #ccc;
+}
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw + 0.3rem, 3.5rem);
+}
+h2 {
+  font-size: clamp(1.5rem, 3vw + 0.3rem, 3rem);
+  color: #22ddff;
+}
+h3 {
+  font-size: clamp(1.2rem, 3vw + 0.3rem, 2rem);
+}
+p {
+  font-size: clamp(1rem, 3vw + 0.2rem, 1.2rem);
+  line-height: 1.5rem;
+}
+span {
+  font-size: clamp(1rem, 3vw + 0.2rem, 1.4rem);
+}
+body {
+  background-color: #1d1d20;
+  color: #ccc;
+  font-family: "Inter", sans-serif;
+}
+
+/*************** index/nav design starts here ********************/
+
+.video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.background-video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.video-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(43, 18, 2, 0.5);
+}
+.nav-h1 {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  z-index: 3;
+  color: #ccc;
+  background-color: #1d1d20;
+  border-bottom: 0.01rem solid #22ddff;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.index-h1 {
+  background-color: unset;
+}
+nav {
+  position: fixed;
+  z-index: 3;
+  top: 5rem;
+  width: 100%;
+}
+nav ul {
+  line-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #1d1d20;
+  padding-top: 2rem;
+  text-align: center;
+}
+.index-ul {
+  background-color: unset;
+}
+
+.nav {
+  position: fixed;
+  z-index: 3;
+  top: 5rem;
+  width: 100%;
+}
+
+.nav ul {
+  line-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #1d1d20;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.nav ul .nav-link {
+  width: 9rem;
+  position: relative;
+  color: #ccc;
+  font-weight: bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.homepage-nav ul {
+  background-color: unset;
+}
+
+/*********************** index design ends here ***************/
+
+/*********************** about design starts here ***************/
+/*********************** about design ends here ***************/
+
+/*********************** projects design starts here ***************/
+/*********************** projects design ends here ***************/
+
+/*********************** contact design starts here ***************/
+/*********************** contact design ends here ***************/
+
+/*********************** media queries starts here ******************/
