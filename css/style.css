@@ -145,15 +145,162 @@ nav ul {
   background-color: unset;
 }
 
+.intro-paragraphs {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  padding-left: 2rem;
+}
+.intro-paragraphs p {
+  margin: 1rem;
+}
+.nav-h1-shrink {
+  font-size: 1rem;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
 /*********************** index design ends here ***************/
 
 /*********************** about design starts here ***************/
-/*********************** about design ends here ***************/
-
+.container {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.education-section,
+.skills-section {
+  border-top: 0.01rem solid #ccc;
+  padding-top: 0.5rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+.section {
+  border-top: 0.01rem solid #ccc;
+  margin: 3rem auto 0;
+  width: 90%;
+  text-align: left;
+}
+.section h3 {
+  padding-top: 1rem;
+}
+.about-spans,
+.skills-spans {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.about-spans span {
+  border: 0.01rem solid #f1a64e;
+  display: inline-block;
+  width: max-content;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.in-progress {
+  margin-top: 1rem;
+}
+.coursera,
+.credly {
+  margin-top: 2rem;
+}
+.coursera a,
+.credly a {
+  font-size: clamp(1rem, 3vw + 0.2rem, 1.2rem);
+  color: #22ddff;
+  border: 0.01rem solid #22ddff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.date {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+.skills-spans span {
+  border: 0.01rem solid #22ddff;
+  color: #22ddff;
+  display: inline-block;
+  width: max-content;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.last {
+  margin-bottom: 3rem;
+}
 /*********************** projects design starts here ***************/
 /*********************** projects design ends here ***************/
 
-/*********************** contact design starts here ***************/
-/*********************** contact design ends here ***************/
+/********************* media queries ******************/
+@media (min-width: 48rem) {
+  .nav ul {
+    position: fixed;
+    height: 50vh;
+    top: 50%;
+    left: 0;
+    padding-left: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
 
-/*********************** media queries starts here ******************/
+  .nav ul .nav-link:hover {
+    cursor: pointer;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    color: #22ddff;
+    margin-left: 1rem;
+  }
+  .intro-paragraphs {
+    width: 60%;
+  }
+  .container {
+    width: 60%;
+  }
+
+  /**************** about starts here **************/
+
+  .section,
+  .education-section,
+  .skills-section {
+    width: 60vw;
+    padding-left: 2rem;
+  }
+}
