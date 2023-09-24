@@ -258,7 +258,135 @@ nav ul {
   margin-bottom: 3rem;
 }
 /*********************** projects design starts here ***************/
+.section h2 {
+  margin-top: 1rem;
+  border-top: 0.01rem solid #22ddff;
+  border-right: 0.01rem solid #22ddff;
+  border-bottom: 0.01rem solid #22ddff;
+  width: max-content;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 3rem auto;
+}
+.objectives-container {
+  border-left: 0.01rem solid #22ddff;
+  padding-left: 1rem;
+}
+.objectives-container p {
+  margin-bottom: 2rem;
+}
+p {
+  margin: 1rem auto;
+}
+.created-with {
+  margin-top: 3rem;
+}
+.created-with-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.created-with-container span {
+  border: 0.01rem solid #22ddff;
+  display: inline-block;
+  width: max-content;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.visit-website {
+  border: 0.01rem solid #f1a64e;
+  color: #f1a64e;
+  display: inline-block;
+  width: max-content;
+  padding: 0.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.last {
+  margin-bottom: 10rem;
+}
 /*********************** projects design ends here ***************/
+
+/************************* contact design starts here ***********/
+/************************* contact design ends here ***********/
+
+/*************************** footer design starts here ***********/
+footer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  bottom: 2rem;
+  padding: 2rem 2rem 0 2rem;
+  height: 10rem;
+}
+
+.linked-in-git {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 8rem;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+.linked-in {
+  border: 0.1rem solid #22ddff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.react {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 2rem;
+  animation: React-logo-spin infinite 20s linear;
+  -webkit-animation: React-logo-spin infinite 20s linear;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+@media (hover: hover) {
+  .react:hover {
+    width: 6rem;
+    height: 6rem;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+  }
+}
+@keyframes React-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*************************** footer design ends here ***********/
 
 /********************* media queries ******************/
 @media (min-width: 48rem) {
@@ -299,8 +427,10 @@ nav ul {
 
   .section,
   .education-section,
-  .skills-section {
+  .skills-section,
+  .projects-section {
     width: 60vw;
     padding-left: 2rem;
   }
+  /********* footer *********/
 }
