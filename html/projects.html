@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Laszlo Varga | Projects</title>
+    <meta
+      name="description"
+      content="Check out some of the projects I have built."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,6 +22,9 @@
     <header>
       <nav class="nav">
         <a href="/index.html"><h1 class="nav-h1">Laszlo Varga</h1></a>
+        <a href="mailto: v2leslie@yahoo.com" class="email-icon"
+          ><img src="/images/email.svg" alt="email icon"
+        /></a>
         <ul>
           <li><a class="nav-link" href="../index.html">Home</a></li>
           <li><a class="nav-link" href="about.html">About</a></li>
@@ -40,7 +47,16 @@
 
         <section class="projets-section section ozonemaster">
           <h2 class="ozonemaster">Ozone Master</h2>
-          <img src="../images/ozonemaster.JPG" alt="Ozone Master" />
+          <img
+            srcset="
+              ../images/ozonemaster-mobile.webp   620w,
+              ../images/ozonemaster-desktop.webp 1899w
+            "
+            sizes="(max-width: 768px) 620px, 1899px"
+            src="../images/ozonemaster-desktop.jpg"
+            loading="lazy"
+            alt="Ozone Master"
+          />
           <div class="objectives-container">
             <p class="objectives">Objectives:</p>
             <p>To create a strong online presence for a startup</p>
@@ -77,8 +93,17 @@
         <!-- Skorpioklima Starts Here -->
 
         <section class="projets-section section">
-          <h2 class="ozonemaster">Skorpioklima</h2>
-          <img src="../images/skorpioklima.JPG" alt="Ozone Master" />
+          <h2 class="skorpioklima">Skorpioklima</h2>
+          <img
+            srcset="
+              ../images/skorpioklima-mobile.webp   620w,
+              ../images/skorpioklima-desktop.webp 1899w
+            "
+            sizes="(max-width: 768px) 620px, 1899px"
+            src="../images/skorpioklima-desktop.jpg"
+            loading="lazy"
+            alt="Skorpioklima"
+          />
           <div class="objectives-container">
             <p class="objectives">Objectives:</p>
             <p>To create a strong online presence for a startup</p>
@@ -119,8 +144,17 @@
         <!-- CRWN Dental Starts Here -->
 
         <section class="projets-section section">
-          <h2 class="ozonemaster">CRWN Dental</h2>
-          <img src="../images/dentist.JPG" alt="Skorpioklima" />
+          <h2 class="CRWN">CRWN Dental</h2>
+          <img
+            srcset="
+              ../images/dentist-mobile.webp   620w,
+              ../images/dentist-desktop.webp 1896w
+            "
+            sizes="(max-width: 768px) 620px, 1896px"
+            src="../images/dentist-desktop.jpg"
+            loading="lazy"
+            alt="Dentist"
+          />
           <div class="objectives-container">
             <p class="objectives">Objectives:</p>
             <p>
@@ -158,8 +192,17 @@
         <!-- FinglasCrossfit -->
 
         <section class="projets-section section">
-          <h2 class="ozonemaster">FinglasCrossfit</h2>
-          <img src="../images/gym.JPG" alt="FinglasCrossFit" />
+          <h2 class="gym">FinglasCrossfit</h2>
+          <img
+            srcset="
+              ../images/gym-mobile.webp   620w,
+              ../images/gym-desktop.webp 1894w
+            "
+            sizes="(max-width: 768px) 620px, 1894px"
+            src="../images/gym-desktop.jpg"
+            loading="lazy"
+            alt="gym"
+          />
           <div class="objectives-container">
             <p class="objectives">Objectives:</p>
             <p>
@@ -312,12 +355,15 @@
           <a href="https://linkedin.com" target="_blank">in</a>
         </div>
         <div class="icon">
-          <a href=""><img src="../images/icons8-github.svg" /></a>
+          <a href="https://github.com"
+            ><img src="../images/icons8-github.svg" alt="github icon"
+          /></a>
         </div>
       </div>
-      <div class="react icon" title="See React version">
+      <div class="icon" title="See React version">
+        <p>See React Version</p>
         <a href="https://lvpfmain2024.tech" target="_blank"
-          ><img src="../images/react.svg"
+          ><img src="../images/react.svg" class="react" alt="react icon"
         /></a>
       </div>
     </footer>
