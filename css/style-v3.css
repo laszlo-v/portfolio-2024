@@ -47,10 +47,15 @@ body {
   background-color: #1d1d20;
   color: #ccc;
   font-family: "Inter", sans-serif;
+  min-height: 120lvh;
+  overflow-y: auto;
   max-width: 2592px;
   margin: 0 auto;
 }
-
+.body-index {
+  min-height: 100vh;
+  max-height: 100vh;
+}
 /*************** index/nav design starts here ********************/
 
 .video-container {
@@ -167,7 +172,7 @@ nav ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  top: 50%;
+  top: 60%;
   left: 50%;
   width: 90%;
   transform: translate(-50%, -50%);
@@ -347,7 +352,7 @@ p {
 
 .contact-intro {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 50%;
   width: 80vw;
   transform: translate(-50%, -20%);
@@ -358,10 +363,10 @@ p {
 }
 form {
   position: absolute;
-  top: 60%;
+  top: 85%;
   left: 50%;
   width: 80vw;
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -398,7 +403,7 @@ label {
 }
 input,
 textarea {
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: inherit;
   outline: none;
   border: none;
@@ -428,7 +433,10 @@ textarea:focus + label {
   outline: none;
   border: 0.1rem solid #22ddff;
   background-color: inherit;
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+.submit-button:hover {
+  cursor: pointer;
 }
 
 /************************* contact design ends here ***********/
@@ -438,14 +446,16 @@ footer {
   position: fixed;
   display: flex;
   align-items: center;
+  background-color: #1d1d20;
   justify-content: space-between;
   width: 100vw;
-  margin-top: 5rem;
   bottom: -0;
   padding: 0rem 2rem 0 2rem;
   height: 6rem;
 }
-
+.footer-home {
+  background-color: unset;
+}
 .linked-in-git {
   display: flex;
   align-items: center;
