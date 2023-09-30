@@ -19,14 +19,14 @@
     <header>
       <nav class="nav">
         <a href="/index.html"><h1 class="nav-h1">Laszlo Varga</h1></a>
-        <a href="mailto: v2leslie@yahoo.com" class="email-icon"
+        <a href="mailto:v2leslie@yahoo.com" class="email-icon"
           ><img src="/images/email.svg" alt="email icon"
         /></a>
         <ul>
           <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
           <li><a class="nav-link" href="projects.html">Projects</a></li>
           <li><a class="nav-link" href="blogs.html">Blogs</a></li>
-          <li><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -34,31 +34,50 @@
     <!-- Header Ends Here -->
 
     <!-- Main Starts Here -->
-    <main>
-      <div class="intro-paragraphs contact-intro">
+    <main class="contact-main">
+      <div class="contact-intro">
         <p>Get in Touch</p>
-        <form>
-          <div class="form-field">
-            <input type="text" name="name" id="name" class="input" />
-            <label class="label">Name</label>
-          </div>
-          <div class="form-field">
-            <input type="email" name="email" id="message" class="input" />
-            <label class="label">Email</label>
-          </div>
-          <div class="form-field">
-            <textarea
-              type="text"
-              name="message"
-              id="message"
-              rows="3"
-              class="input"
-            ></textarea>
-            <label class="label">Message</label>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
       </div>
+      <form>
+        <div class="form-field">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="name input"
+            aria-required
+          />
+          <label for="name" class="label"
+            >Name: <span class="nameSpan" aria-hidden></span
+          ></label>
+        </div>
+        <div class="form-field">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="email input"
+            aria-required
+          />
+          <label for="email" class="label"
+            >Email: <span class="emailSpan" aria-hidden></span
+          ></label>
+        </div>
+        <div class="form-field">
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="3"
+            class="message input"
+            aria-required
+          ></textarea>
+          <label for="message" class="label"
+            >Message: <span class="messageSpan" aria-hidden></span
+          ></label>
+        </div>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
     </main>
 
     <!-- Main Ends Here -->
@@ -75,7 +94,7 @@
           /></a>
         </div>
       </div>
-      <div class="icon" title="See React version">
+      <div class="icon react-div" title="See React version">
         <p>See React Version</p>
         <a href="https://lvpfmain2024.tech" target="_blank"
           ><img src="../images/react.svg" class="react" alt="react icon"
