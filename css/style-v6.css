@@ -382,7 +382,7 @@ form {
 label {
   position: absolute;
   top: 0;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw + 0.2rem, 1.2rem);
   margin-bottom: 0.5rem;
   padding-left: 0.5rem;
   transition: all 0.5s;
@@ -428,17 +428,28 @@ textarea:focus + label {
 .submit-button {
   display: block;
   width: 8rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   color: #ccc;
   outline: none;
   border: 0.1rem solid #22ddff;
   background-color: inherit;
-  font-size: 1rem;
+  font-size: clamp(1rem, 3vw + 0.2rem, 1.3rem);
 }
 .submit-button:hover {
   cursor: pointer;
 }
 
+.success-hide {
+  color: #1d1d20;
+}
+.success-show {
+  font-size: clamp(1rem, 3vw + 0.2rem, 1.2rem);
+  color: #22ddff;
+  margin-bottom: 1rem;
+}
+.success-show span {
+  color: #f1a64e;
+}
 /************************* contact design ends here ***********/
 
 /*************************** footer design starts here ***********/
@@ -449,9 +460,11 @@ footer {
   background-color: #1d1d20;
   justify-content: space-between;
   width: 100vw;
-  bottom: -0;
+  bottom: 0;
   padding: 0rem 2rem 0 2rem;
   height: 6rem;
+  left: 0;
+  right: 0;
 }
 .footer-home {
   background-color: unset;
@@ -553,6 +566,9 @@ footer {
     width: 60%;
   }
 
+  footer {
+    padding: 0 3rem 0 2rem;
+  }
   /**************** about starts here **************/
 
   .section,

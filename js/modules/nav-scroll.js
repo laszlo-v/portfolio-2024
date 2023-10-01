@@ -5,7 +5,7 @@ const emailIcon = document.querySelector(".email-icon");
 
 const handleScroll = () => {
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 80) {
+    if (window.scrollY > 40) {
       navH1.classList.add("nav-h1-shrink");
       emailIcon.classList.add("email-icon-shrink");
     } else {
@@ -14,6 +14,5 @@ const handleScroll = () => {
     }
   });
 };
-navH1 ? handleScroll() : "";
 
 export { handleScroll };

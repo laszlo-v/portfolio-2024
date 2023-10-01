@@ -10,6 +10,8 @@ const formValidation = () => {
   const messageSpan = document.querySelector(".messageSpan");
   const inputs = document.querySelectorAll(".input");
   const labels = document.querySelectorAll(".label");
+  const success = document.querySelector(".success-hide");
+  const span = document.querySelector(".success-hide span");
 
   // Regular/common regex pattern for email validation
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -77,21 +79,62 @@ const formValidation = () => {
       clearError(message, messageSpan);
     }
 
-    if (isValid) {
+    const sendFormData = async () => {
       const formData = new FormData(form);
-      fetch("../../send-mail.php", {
-        method: "POST",
-        body: formData,
-      })
-        .then((response) => response.text())
-        .then((data) => console.log(data));
-      window.location.href = "/index.html";
+
+      try {
+        const response = await fetch("../../send-mail.php", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          const data = await response.text();
+          console.log(data);
+        } else {
+          console.error(
+            "Failed to fetch data:",
+            response.status,
+            response.statusText
+          );
+        }
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    };
+
+    // Call the async function to send the form data
+
+    if (isValid) {
+      // If the all the inputs are valid sending the form data to the PHP file to process
+      sendFormData();
+
+      //Form reset
       form.reset();
+
+      // Aria reset
       fnName.setAttribute("aria-invalid", "false");
       email.setAttribute("aria-invalid", "false");
       message.setAttribute("aria-invalid", "false");
+      success.classList.add("success-show");
+      let sec = 5;
+
+      const counter = () => {
+        if (sec >= 0) {
+          span.textContent = `${sec}`;
+          sec--;
+        } else {
+          clearInterval(interval);
+        }
+      };
+      const interval = setInterval(counter, 1000);
+      setTimeout(() => {
+        window.location.href = "/index.html";
+        success.classList.remove("success-show");
+      }, 6000);
     }
   });
 };
 
+// Exporting the function
 export { formValidation };
