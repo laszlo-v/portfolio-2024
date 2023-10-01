@@ -28,6 +28,7 @@ const formValidation = () => {
     });
   }
 
+  // Removing the error when the user starts typing in the input field
   fnName.addEventListener("input", () => {
     clearError(fnName, fnNameSpan);
   });
@@ -40,6 +41,7 @@ const formValidation = () => {
     clearError(message, messageSpan);
   });
 
+  // A showError function to highlight input fields
   const showError = (input, span, errorMessage) => {
     input.style.cssText = "border: .1rem solid #f1a64e";
     span.textContent = errorMessage;
@@ -53,9 +55,11 @@ const formValidation = () => {
     span.setAttribute("aria-hidden", "true");
   };
 
+  // Adding an eventlistener - submit- for the form
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    // A boolean that will be used if the input is invalid or valid
     let isValid = true;
 
     if (!fnName.value) {
@@ -79,6 +83,8 @@ const formValidation = () => {
       clearError(message, messageSpan);
     }
 
+    // An async function to handle the form submit
+    // This function will be called if all the values in the input fields are valid.
     const sendFormData = async () => {
       const formData = new FormData(form);
 
@@ -117,6 +123,8 @@ const formValidation = () => {
       email.setAttribute("aria-invalid", "false");
       message.setAttribute("aria-invalid", "false");
       success.classList.add("success-show");
+
+      // Countdown setup for successful submit
       let sec = 5;
 
       const counter = () => {
@@ -128,6 +136,8 @@ const formValidation = () => {
         }
       };
       const interval = setInterval(counter, 1000);
+
+      // Redirecting the user back to the home page.
       setTimeout(() => {
         window.location.href = "/index.html";
         success.classList.remove("success-show");

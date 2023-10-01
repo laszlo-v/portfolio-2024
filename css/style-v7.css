@@ -22,19 +22,24 @@ a:hover {
 a:active {
   color: #ccc;
 }
-ul {
+a:focus {
+  color: #22ddff;
+  border: 0.1rem solid #f1a64e;
+}
+ul,
+ol {
   list-style-type: none;
 }
 
 h1 {
-  font-size: clamp(2rem, 3vw + 0.3rem, 3.5rem);
+  font-size: clamp(2rem, 3vw + 0.2rem, 3.5rem);
 }
 h2 {
-  font-size: clamp(1.5rem, 3vw + 0.3rem, 3rem);
+  font-size: clamp(1.5rem, 3vw + 0.2rem, 3rem);
   color: #22ddff;
 }
 h3 {
-  font-size: clamp(1.2rem, 3vw + 0.3rem, 2rem);
+  font-size: clamp(1.2rem, 3vw + 0.2rem, 2rem);
 }
 p {
   font-size: clamp(1rem, 3vw + 0.2rem, 1.2rem);
@@ -56,6 +61,28 @@ body {
   min-height: 100vh;
   max-height: 100vh;
 }
+
+/* Styling for the skip link */
+.skip-link {
+  position: absolute;
+  top: -5rem;
+  left: 5vw;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  z-index: 5;
+}
+
+/* Styling for the skip link when focused */
+.skip-link:focus {
+  top: 1rem;
+  display: block;
+  border: 0.1rem solid #22ddff;
+}
+
 /*************** index/nav design starts here ********************/
 
 .video-container {
@@ -438,7 +465,10 @@ textarea:focus + label {
 .submit-button:hover {
   cursor: pointer;
 }
-
+.submit-button:focus {
+  border: 0.1rem solid #f1a64e;
+  color: #22ddff;
+}
 .success-hide {
   color: #1d1d20;
 }
@@ -592,5 +622,26 @@ footer {
   form,
   .contact-intro {
     width: 35rem;
+  }
+}
+/********************* For older smart phones *********/
+@media screen and (max-width: 360px) and (max-height: 640px) and (orientation: portrait) {
+  body {
+    min-height: 140lvh;
+  }
+  .contact-intro {
+    top: 35%;
+  }
+  form {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 80vw;
+    padding-bottom: 10rem;
+    transform: translate(-50%, -40%);
+    -webkit-transform: translate(-50%, -40%);
+    -moz-transform: translate(-50%, -40%);
+    -ms-transform: translate(-50%, -40%);
+    -o-transform: translate(-50%, -40%);
   }
 }
