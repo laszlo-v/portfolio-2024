@@ -5,11 +5,12 @@ import { handleScroll } from "./modules/nav-scroll.js";
 import { formValidation } from "./modules/form-validation.js";
 import { skipLink } from "./modules/skip-link.js";
 
-// Getting the form
-const form = document.querySelector("form");
-
 // Adding an DOMContentLoaded eventlistener
 document.addEventListener("DOMContentLoaded", () => {
+  const mainContent = document.querySelector("#main-content");
+  // Getting the form
+  const form = document.querySelector("form");
+
   // Calling handleScroll
   handleScroll();
 
@@ -17,5 +18,5 @@ document.addEventListener("DOMContentLoaded", () => {
   form ? formValidation() : "";
 
   // Calling the skipLink function
-  skipLink();
+  mainContent ? skipLink() : "";
 });

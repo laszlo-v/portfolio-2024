@@ -21,7 +21,7 @@ const formValidation = () => {
     const input = inputs[i];
     const label = labels[i];
 
-    input.addEventListener("input", function () {
+    input.addEventListener("input", () => {
       input.value.length
         ? label.classList.add("shrink")
         : label.classList.remove("shrink");
@@ -135,6 +135,8 @@ const formValidation = () => {
           clearInterval(interval);
         }
       };
+
+      // Calling the counter function in every second
       const interval = setInterval(counter, 1000);
 
       // Redirecting the user back to the home page.
