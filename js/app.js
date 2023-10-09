@@ -4,6 +4,7 @@
 import { handleScroll } from "./modules/nav-scroll.js";
 import { formValidation } from "./modules/form-validation.js";
 import { skipLink } from "./modules/skip-link.js";
+import { handleFooterScroll } from "./modules/footer-scroll.js";
 
 // Adding an DOMContentLoaded eventlistener
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Calling handleScroll
   handleScroll();
+  handleFooterScroll();
 
   // Making sure that the formValidation runs only when there is a form
   form ? formValidation() : "";

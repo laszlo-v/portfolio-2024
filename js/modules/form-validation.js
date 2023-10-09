@@ -76,7 +76,7 @@ const formValidation = () => {
       clearError(email, emailSpan);
     }
 
-    if (!message.value || message.value.length < 50) {
+    if (!message.value || message.value.trim().length < 50) {
       showError(message, messageSpan, "Minimum 50 characters *");
       isValid = false;
     } else {
