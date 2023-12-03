@@ -57,8 +57,12 @@ p {
   font-size: clamp(1rem, 2vw + 0.1rem, 1.2rem);
   line-height: 1.5rem;
 }
-span {
+span,
+li {
   font-size: clamp(1rem, 2vw + 0.1rem, 1.4rem);
+}
+ul li {
+  margin: 0.5rem;
 }
 /* Body styles */
 body {
@@ -273,14 +277,15 @@ nav ul {
 .section h3 {
   padding-top: 1rem;
 }
-.about-spans,
-.skills-spans {
+.about-ul,
+.skills-ul {
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
-.about-spans span {
+
+.about-ul li {
   border: 0.01rem solid var(--secondary-color);
   display: inline-block;
   width: max-content;
@@ -303,6 +308,7 @@ nav ul {
   font-size: clamp(1rem, 3vw + 0.2rem, 1.2rem);
   color: var(--primary-color);
   border: 0.01rem solid var(--primary-color);
+  box-shadow: 0 4px 2px -2px var(--primary-color);
   padding: 0.5rem;
   border-radius: 0.5rem;
   -webkit-border-radius: 0.5rem;
@@ -310,11 +316,12 @@ nav ul {
   -ms-border-radius: 0.5rem;
   -o-border-radius: 0.5rem;
 }
+
 .date {
   margin-top: 1rem;
   font-size: 1rem;
 }
-.skills-spans span {
+.skills-ul li {
   border: 0.01rem solid var(--primary-color);
   color: var(--primary-color);
   display: inline-block;
@@ -375,6 +382,7 @@ p {
 }
 .visit-website {
   border: 0.01rem solid var(--secondary-color);
+  box-shadow: 0 4px 2px -2px var(--secondary-color);
   color: var(--secondary-color);
   display: inline-block;
   width: max-content;
